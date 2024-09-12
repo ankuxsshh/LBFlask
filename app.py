@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
-app.debug=True
+app.debug = True
 
 @app.route("/")
 def home():
@@ -19,4 +19,5 @@ def training():
 def partner():
     return render_template("partnerProfile.html")
 
-app.run()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)  # Ensure Flask binds to all network interfaces
