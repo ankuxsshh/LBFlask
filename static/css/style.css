@@ -230,7 +230,7 @@ body {
 }
 
 .navTabs.active {
-  color: #000000 !important;
+  color: #75D457 !important;
   /* add this rule to change text color to black on active state */
 }
 
@@ -526,7 +526,7 @@ body {
 }
 
 .card.cardCourse:hover {
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
   background: #75D457;
   color: #0C334A;
   transform: scale(1.01);
