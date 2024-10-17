@@ -38,8 +38,8 @@
 
     {% block content %}
     <!-- Scroll Down Arrow Button -->
-    <button class="scroll-down-arrow" aria-label="Scroll Down" onclick="scrollToFooter()">
-        <i class='bx bxs-chevrons-down'></i>
+    <button class="scroll-down-arrow" aria-label="Scroll Down" onclick="autoScrollToFooter()">
+    <i class='bx bxs-chevrons-down'></i>
     </button>
     {% endblock %}
 
@@ -54,7 +54,7 @@
     </a>
     <!-- Scroll to Top -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">
-        <span class="material-symbols-outlined" style="font-size: clamp(1rem, 1.4861rem + -1.5556vw, 0.125rem);">arrow_upward</span>
+        <span class="fa-solid fa-chevron-up" style="font-size: clamp(1rem, 1.4861rem + -1.5556vw, 0.125rem);"></span>
     </button>
 </div>
 
@@ -89,15 +89,36 @@
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
     };
-
-    // Scroll to footer function
-    function scrollToFooter() {
-        const footer = document.getElementById('footer');
-        footer.scrollIntoView({
-            behavior: 'smooth' // Smooth scroll effect
-        });
-    }
 </script>
 
+<script>
+    // Auto scroll function to slowly scroll down to the footer
+    function autoScrollToFooter() {
+        const footer = document.getElementById('footer');
+        const footerPosition = footer.getBoundingClientRect().top + window.scrollY;
+        const scrollDuration = 10000; // Scroll duration in milliseconds (10 seconds)
+        const startPosition = window.scrollY;
+        const distance = footerPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, scrollDuration);
+            window.scrollTo(0, run);
+            if (timeElapsed < scrollDuration) requestAnimationFrame(animation);
+        }
+
+        // Easing function for smooth scrolling
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+</script>
 </body>
 </html>
