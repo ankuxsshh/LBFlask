@@ -37,10 +37,7 @@
     {% include 'navbar.html' %}
 
     {% block content %}
-    <!-- Scroll Down Arrow Button -->
-    <button class="scroll-down-arrow" aria-label="Scroll Down" onclick="scrollToFooter()">
-        <i class='bx bxs-chevrons-down'></i>
-    </button>
+
     {% endblock %}
 
     {% include 'footer.html' %}
@@ -90,13 +87,6 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
     };
 
-    // Scroll to footer function
-    function scrollToFooter() {
-        const footer = document.getElementById('footer');
-        footer.scrollIntoView({
-            behavior: 'smooth' // Smooth scroll effect
-        });
-    }
 </script>
 
 </body>
