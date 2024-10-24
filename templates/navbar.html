@@ -1,5 +1,5 @@
 <div class="fixedTop">
-  <!-- Top bar-->
+  <!-- Top bar -->
   <div class="d-none d-lg-block">
     <div class="top-bar">
       <div class="container d-flex justify-content-end align-items-center">
@@ -40,15 +40,29 @@
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav d-flex gap-2">
-          <li class="nav-item"><a class="nav-link navItem active" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about-us">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/training-courses">Training Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="/collection">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="/collection">Careers</a></li>
-          <li class="nav-item"><a class="nav-link" href="/collection">News & Blogs</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link styled-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/training-courses">Training Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">News & Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/contact">Contact Us</a>
+          </li>
         </ul>
-      </div>
+      </div>      
 
       <!-- Country Dropdown -->
       <div class="dropdown">
@@ -57,29 +71,39 @@
           Canada
         </button>
         <ul class="dropdown-menu custom-dropdown-menu border-1">
-          <li><a class="dropdown-item fw-bold" href="#" onclick="selectCountry('Canada')">Canada</a></li>
-          <li><a class="dropdown-item fw-bold" href="#" onclick="selectCountry('UK')">UK</a></li>
-          <li><a class="dropdown-item fw-bold" href="#" onclick="selectCountry('Qatar')">Qatar</a></li>
-          <li><a class="dropdown-item fw-bold" href="#" onclick="selectCountry('India')">India</a></li>
+          <li>
+            <a class="dropdown-item fw-bold" href="#" onclick="selectCountry('Canada')">Canada</a>
+          </li>
+          <li>
+            <a class="dropdown-item fw-bold" href="#" onclick="selectCountry('UK')">UK</a>
+          </li>
+          <li>
+            <a class="dropdown-item fw-bold" href="#" onclick="selectCountry('Qatar')">Qatar</a>
+          </li>
+          <li>
+            <a class="dropdown-item fw-bold" href="#" onclick="selectCountry('India')">India</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </div>
-
+<style>
+  .nav-link.styled-link:hover {
+    color: #746ffb !important;  /* Ensures the hover color overrides any other styles */
+    text-decoration: none; /* Removes underline on hover */
+  }  
+</style>
 <!-- JavaScript -->
 <script>
   function selectCountry(country) {
     fetch('/update_contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ country: country })
     })
     .then(response => response.json())
     .then(data => {
-      // Update the phone number and country display
       document.getElementById('phone-number').innerHTML = 
         `<i class='bx bx-phone-call'></i> ${data.phone}`;
       document.getElementById('selected-country').textContent = data.country;

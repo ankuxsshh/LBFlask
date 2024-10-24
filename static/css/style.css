@@ -15,27 +15,6 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
-/* width
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track
-::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0);
-}
-
-/* Handle
-::-webkit-scrollbar-thumb {
-  background: #1D547F;
-
-}
-
-/* Handle on hover
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(15,144,77);
-}*/
-
 * {
   margin: 0;
   padding: 0;
@@ -43,14 +22,12 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
-
 body {
   background: #f6f8f8bb !important;
   font-family: "Manrope", sans-serif;
 
 }
-
-/**Whatsapp button ***/
+/** WhatsApp and Call Buttons ***/
 .btn-whatsapp-pulse {
   background: #22dd67;
   color: white;
@@ -64,29 +41,33 @@ body {
   width: 0;
   height: 0;
   padding: 25px;
-  text-decoration: none;
+  text-decoration: none; /* Ensure no underline by default */
   border-radius: 50%;
   animation-name: pulse;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
+  transition: transform 0.3s; /* Smooth scaling effect on hover */
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-  }
-
-  80% {
-    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-  }
+/* Call Icon Styling */
+.call-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  text-decoration: none; /* Remove underline */
+  color: white;
 }
 
+/* WhatsApp Icon Styling */
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Animation for the Border Effect */
 .btn-whatsapp-pulse-border {
   bottom: 110px;
   right: 30px;
   animation-play-state: paused;
-
 }
 
 .btn-whatsapp-pulse-border::before {
@@ -102,17 +83,24 @@ body {
   animation-iteration-count: infinite;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
 @keyframes pulse-border {
   0% {
     padding: 25px;
     opacity: 0.75;
   }
-
   75% {
     padding: 50px;
     opacity: 0;
   }
-
   100% {
     opacity: 0;
   }
@@ -176,7 +164,7 @@ body {
 .nav-link {
   margin: 5px;
   position: relative;
-  color: rgba(255, 255, 255, 0.8) important;
+  color: rgba(255, 77, 77, 0.045) important;
 }
 
 .nav-link::after {
@@ -280,7 +268,7 @@ body {
 }
 
 .top-bar a:hover {
-  color: #75D457;
+  color: #746ffb;
 }
 
 .navbar-brand {
@@ -396,6 +384,7 @@ body {
   }
 }
 
+
 .header {
   position: relative;
 }
@@ -450,23 +439,6 @@ body {
   background-color: rgba(12, 51, 74, 1);
 }
 
-/* .form-control.searchBar {
-  padding: 20px;
-  border-radius: 30px;
-  border: none;
-} */
-
-/* .btn.searchBtn {
-  background: #ffffff;
-  border-radius: 30px;
-  padding: 20px;
-}
-
-.btn.searchBtn:hover {
-  background: #ffffff;
-  color: #000;
-} */
-
 .btn.enrollBtn {
   background: rgba(12, 51, 74, 0.9);
   padding: 10px 30px 10px 30px;
@@ -509,15 +481,6 @@ body {
   color: #75d357;
 }
 
-.vertical-line {
-  border-left: 1px solid #636363;
-  height: 50px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 100%;
-}
-
 .card.cardCourse {
   background: #0C334A;
   color: #ffffff;
@@ -527,7 +490,7 @@ body {
 
 .card.cardCourse:hover {
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
-  background: #75D457;
+  background: rgba(116, 212, 87, 0.805);
   color: #0C334A;
   transform: scale(1.01);
 }
@@ -607,61 +570,6 @@ body {
 }
 
 
-/* .arrow-container {
-	 display: block;
-	 width: 100px;
-	 height: 50px;
-	 position: absolute;
-	 left: 50%;
-	 transform: translate(-50%, -50%) rotateZ(0deg);
-}
- .arrow-container:hover {
-	 cursor: pointer;
-}
- .arrow-container:hover .arrow {
-	 top: 50%;
-}
- .arrow-container:hover .arrow:before {
-	 transform: translate(-50%, -50%) rotateZ(-30deg);
-}
- .arrow-container:hover .arrow:after {
-	 transform: translate(-50%, -50%) rotateZ(30deg);
-}
- .arrow {
-	 position: absolute;
-	 left: 50%;
-	 transition: all 0.4s ease;
-}
- .arrow:before, .arrow:after {
-	 transition: all 0.4s ease;
-	 content: '';
-	 display: block;
-	 position: absolute;
-	 transform-origin: bottom right;
-	 background: #fff;
-	 width: 4px;
-	 height: 30px;
-	 border-radius: 10px;
-	 transform: translate(-50%, -50%) rotateZ(-45deg);
-}
- .arrow:after {
-	 transform-origin: bottom left;
-	 transform: translate(-50%, -50%) rotateZ(45deg);
-}
- .arrow:nth-child(1) {
-	 opacity: 0.3;
-	 top: 35%;
-}
- .arrow:nth-child(2) {
-	 opacity: 0.6;
-	 top: 55%;
-}
- .arrow:nth-child(3) {
-	 opacity: 0.9;
-	 top: 75%;
-}*/
-
-
 /**Progress bar**/
 @keyframes growProgressBar {
 
@@ -715,8 +623,8 @@ div[role="progressbar"]::before {
   display: flex;
   align-items: center;
   background: #ffffff;
-  border-radius: 10px;
-  top: 3.8px;
+  border-radius: 20px;
+  top: 4.2px;
 }
 
 .searchInput {
@@ -738,9 +646,9 @@ div[role="progressbar"]::before {
 
 .searchButton {
   color: rgba(12, 51, 74, 1);
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 48px;
+  height: 22px;
+  border-radius: 20px;
   background: #ffffff;
   display: flex;
   justify-content: center;
@@ -767,5 +675,182 @@ div[role="progressbar"]::before {
   .searchBox:hover .searchInput {
       width: 200px;
       padding: 0 10px;
+  }
+}
+
+/* Navigation link hover effect */
+.nav-link:hover {
+  color: #75D457 !important; /* Change to any color you like */
+  text-decoration: none; /* Optional: remove underline */
+} 
+
+.custom-h4 {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Custom styling for small screens */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .btn {
+    width: 100%; /* Make the button full-width */
+  }
+  .list-unstyled h4 {
+    font-size: 14px;
+  }
+}
+
+/* Wrapper for the video to fill the entire carousel */
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the area */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Gradient overlay for text readability */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+/* Carousel caption wrapper centered using Flexbox */
+.carousel-caption-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+/* Styling for the headings */
+.heading-text {
+  font-size: 2.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+h4 {
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+/* Scroll down arrow button */
+.scroll-down-arrow {
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow i {
+  font-size: 2rem;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Fullscreen carousel height */
+.carousel-item {
+  height: 80vh;
+  position: relative;
+}
+
+/* Header overflow hidden to prevent content spill */
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .heading-text {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption-wrapper {
+    padding: 1rem;
+  }
+
+  .scroll-down-arrow i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .background-video {
+    object-fit: fill; /* Adjust for very small screens */
+  }
+
+  .heading-text {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+  
+  .carousel-caption-wrapper {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .heading-text {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size : 0.8rem;
+  }
+
+  .scroll-down-arrow i {
+    font-size: 1.3rem;
   }
 }
