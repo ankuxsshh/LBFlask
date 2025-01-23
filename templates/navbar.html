@@ -1,0 +1,84 @@
+<div class="fixedTop">
+  <!-- Top bar -->
+  <div class="d-none d-lg-block">
+    <div class="top-bar">
+      <div class="container d-flex justify-content-end align-items-center">
+        <ul class="list-styled mb-0" id="contact-info">
+          <li>
+            <a href="#" class="text-align-center fw-bold top-bar-link">
+              <img src="static/icons/phone.gif" alt="Phone" class="icon-gif" /> {{ phone }}
+            </a>
+          </li>
+          <li class="text-dark">|</li>
+          <li>
+            <a href="#" class="text-align-center fw-bold top-bar-link">
+              <img src="static/icons/email.gif" alt="Email" class="icon-gif mx-1" /> lbcertifications@gmail.com
+            </a>
+          </li>
+          <li class="text-dark">|</li>
+          <li>
+            <a href="#" class="text-align-center fw-bold top-bar-link">
+              <img src="static/icons/search.gif" alt="Search" class="icon-gif" /> Verify Certificate
+            </a>
+          </li>
+        </ul>        
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="static/images/logo.png" alt="Bootstrap" class="logo">
+      </a>
+      <button class="navbar-toggler togglerButton" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <img src="static/images/icons8-menu.gif" alt="Menu Icon" style="height: 24px;">
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav d-flex gap-2">
+          <li class="nav-item">
+            <a class="nav-link styled-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/training-courses">Training Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/collection">News & Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <!-- Download button with image -->
+            <a class="nav-link styled-link" href="#">
+              <img src="static/images/download-brocher.jfif" alt="Download" style="width: 28px; height: 28px;" title="Download">
+            </a>
+          </li> 
+        </ul>
+      </div>               
+
+<!-- Country Dropdown Form -->
+<form method="POST" action="/" class="d-flex">
+  <select name="country" class="form-select fw-bold custom-dropdown border-0 focus-border-none" onchange="this.form.submit()">
+    <option value="Canada" {% if country == 'Canada' %}selected{% endif %}>Canada</option>
+    <option value="UK" {% if country == 'UK' %}selected{% endif %}>UK</option>
+    <option value="Qatar" {% if country == 'Qatar' %}selected{% endif %}>Qatar</option>
+    <option value="India" {% if country == 'India' %}selected{% endif %}>India</option>
+  </select>
+</form>
+    </div>
+  </nav>
+</div>
