@@ -88,7 +88,6 @@ body {
 }
 
 .nav-link {
-  margin: 5px;
   position: relative;
   color: #0C334A !important;
   /* Change text color on hover */
@@ -133,7 +132,6 @@ body {
 .navTabs {
   position: relative;
   color: #ffffff !important;
-  border: 1px solid transparent;
   transition: color 0.3s ease-in-out;
 }
 
@@ -150,9 +148,7 @@ body {
 
 .navTabs:hover {
   color: #dddddd !important;
-  font-size: 16px;
   transform: scale(1.09);
-  padding: 0.75rem 1.5rem;
 }
 
 .navTabs:hover::after {
@@ -222,7 +218,6 @@ body {
   /* Change color on hover */
   transform: scale(1.09);
   /* Apply 3D effect on text */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), 3px 3px 3 rgba(0, 0, 0, 0.2);
   /* Add shadow for 3D depth */
 }
 
@@ -233,6 +228,30 @@ body {
   text-shadow: none;
   /* Remove shadow on click */
 }
+
+/* Add this CSS to apply the vibration effect to the icons */
+.top-bar a:hover i {
+  animation: vibrate 0.2s ease-in-out;
+}
+
+.top-bar a i {
+  font-size: 1.4rem;
+}
+
+/* Vibration keyframes */
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(4px); }
+}
+
+/* Apply vibration effect only to icons */
+.icon:hover {
+  animation: vibrate 0.2s ease infinite;
+}
+
 
 .navbar-brand {
   margin-top: -3rem;
@@ -298,14 +317,9 @@ body {
   }
 }
 
-
 .nav.headerNav {
-  margin-top: 5.2rem;
-  height: 85px;
-}
-
-.nav.headerNav .nav-item {
-  margin: 22.8px;
+  margin-top: 7.2rem;
+  height: 36px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -586,8 +600,8 @@ div[role="progressbar"]::before {
   align-items: center;
   background: #ffffff;
   border-radius: 20px;
-  top: 10px;
-  height: 32px;
+  top: 3px;
+  height: 30px;
 }
 
 .searchInput {
@@ -893,6 +907,15 @@ h1 {
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   text-align: center;
+}
+
+.click-to-know-more span i {
+  transform: rotate(0deg);
+}
+
+.click-to-know-more:hover span i,
+.click-to-know-more:active span i {
+  transform: rotate(315deg);
 }
 
 .card .click-to-know-more {
@@ -1218,4 +1241,170 @@ h1 {
 
 .bus-section .auto-hover-container .bus-hover-card:nth-child(3) {
   animation: autoHover 3s infinite 2s;
+}
+
+/* About Section Styles */
+.about-section .about-card {
+  background: #0C334A;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  /* Ensures content does not spill outside the card */
+}
+
+.about-section .about-bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the background image */
+  width: 400px;
+  /* Adjust the size as needed */
+  height: 400px;
+  /* Adjust the size as needed */
+  background-image: url('static/images/lloyds-bureau-logo-white.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.06;
+  /* Subtle overlay effect */
+  z-index: 1;
+}
+
+.about-section .about-title {
+  font-size: 40px;
+  z-index: 2;
+  /* Ensures it stays above the background image */
+  text-align: left;
+}
+
+.about-section .about-text {
+  font-size: 15px;
+  z-index: 2;
+  text-align: left;
+}
+
+.about-section .about-btn {
+  border-radius: 10px;
+  height: 40px;
+  text-align: center;
+  transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.about-section .about-btn span i {
+  transform: rotate(0deg);
+}
+
+.about-section .about-btn:hover span i,
+.about-section .about-btn:active span i {
+  transform: rotate(315deg);
+}
+
+.about-section .about-btn:hover {
+  background: rgb(205, 212, 215);
+  color: rgb(18, 10, 48);
+  border: none;
+}
+
+.about-section .about-h4 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: right;
+  z-index: 2;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.about-section .about-h4:hover {
+  color: #75D457;
+  /* Change to the desired hover color */
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* Section-Specific Styles */
+.bus-section .card-content {
+  transition: color 0.5s ease;
+}
+
+/* Default Colors */
+.bus-expert,
+.bus-offerings,
+.bus-training {
+  color: white;
+}
+
+/* Hover Colors */
+.bus-section .bus-expert:hover {
+  color: #75D457;
+}
+
+.bus-section .bus-offerings:hover {
+  color: #75D457;
+}
+
+.bus-section .bus-training:hover {
+  color: #75D457;
+}
+
+/* Automatic Hover Sequence */
+@keyframes hoverSequence {
+
+  0%,
+  33% {
+    color: #75D457;
+  }
+
+  34%,
+  66% {
+    color: white;
+  }
+
+  67%,
+  100% {
+    color: white;
+  }
+}
+
+.bus-expert {
+  animation: hoverSequence 6s infinite;
+}
+
+@keyframes hoverSequenceOfferings {
+
+  0%,
+  33% {
+    color: white;
+  }
+
+  34%,
+  66% {
+    color: #75D457;
+  }
+
+  67%,
+  100% {
+    color: white;
+  }
+}
+
+.bus-offerings {
+  animation: hoverSequenceOfferings 6s infinite;
+}
+
+@keyframes hoverSequenceTraining {
+
+  0%,
+  66% {
+    color: white;
+  }
+
+  67%,
+  100% {
+    color: #75D457;
+  }
+}
+
+.bus-training {
+  animation: hoverSequenceTraining 6s infinite;
 }

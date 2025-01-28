@@ -6,19 +6,19 @@
         <ul class="list-styled mb-0" id="contact-info">
           <li>
             <a href="#" class="text-align-center fw-bold top-bar-link">
-              <img src="static/icons/phone.gif" alt="Phone" class="icon-gif" /> {{ phone }}
+              <i class="fa-solid fa-phone-volume icon mx-2"></i> {{ phone }}
+            </a>
+          </li>
+          <li class="text-dark">|</li>
+          <li>
+            <a href="mailto:lbcertifications@gmail.com" class="text-align-center fw-bold top-bar-link">
+              <i class="fa-regular fa-envelope icon mx-2"></i> lbcertifications@gmail.com
             </a>
           </li>
           <li class="text-dark">|</li>
           <li>
             <a href="#" class="text-align-center fw-bold top-bar-link">
-              <img src="static/icons/email.gif" alt="Email" class="icon-gif mx-1" /> lbcertifications@gmail.com
-            </a>
-          </li>
-          <li class="text-dark">|</li>
-          <li>
-            <a href="#" class="text-align-center fw-bold top-bar-link">
-              <img src="static/icons/search.gif" alt="Search" class="icon-gif" /> Verify Certificate
+              <i class="fa-regular fa-file icon mx-2"></i> Verify Certificate
             </a>
           </li>
         </ul>        
@@ -30,7 +30,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
-        <img src="static/images/logo.png" alt="Bootstrap" class="logo">
+        <img src="static/images/logo.png" alt="Logo" class="logo">
       </a>
       <button class="navbar-toggler togglerButton" type="button" data-bs-toggle="collapse" 
               data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
@@ -53,32 +53,32 @@
             <a class="nav-link styled-link" href="/collection">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link styled-link" href="/collection">Careers</a>
+            <a class="nav-link styled-link" href="/careers">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link styled-link" href="/collection">News & Blogs</a>
+            <a class="nav-link styled-link" href="/news-blogs">News & Blogs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link styled-link" href="/contact">Contact Us</a>
           </li>
           <li class="nav-item">
             <!-- Download button with image -->
-            <a class="nav-link styled-link" href="#">
-              <img src="static/images/download-brocher.jfif" alt="Download" style="width: 28px; height: 28px;" title="Download">
+            <a class="nav-link styled-link" href="static/files/brochure.pdf" download>
+              <img src="static/images/download-brocher.jfif" alt="Download Brochure" style="width: 28px; height: 28px;" title="Download Brochure">
             </a>
           </li> 
         </ul>
-      </div>               
+      </div>
 
-<!-- Country Dropdown Form -->
-<form method="POST" action="/" class="d-flex">
-  <select name="country" class="form-select fw-bold custom-dropdown border-0 focus-border-none" onchange="this.form.submit()">
-    <option value="Canada" {% if country == 'Canada' %}selected{% endif %}>Canada</option>
-    <option value="UK" {% if country == 'UK' %}selected{% endif %}>UK</option>
-    <option value="Qatar" {% if country == 'Qatar' %}selected{% endif %}>Qatar</option>
-    <option value="India" {% if country == 'India' %}selected{% endif %}>India</option>
-  </select>
-</form>
+      <!-- Country Dropdown Form -->
+      <form method="POST" action="/" class="d-flex">
+        <select name="country" class="form-select fw-bold custom-dropdown border-0 focus-border-none" onchange="this.form.submit()">
+          <option value="Canada" {% if country == 'Canada' %}selected{% endif %}>Canada</option>
+          <option value="UK" {% if country == 'UK' %}selected{% endif %}>UK</option>
+          <option value="Qatar" {% if country == 'Qatar' %}selected{% endif %}>Qatar</option>
+          <option value="India" {% if country == 'India' %}selected{% endif %}>India</option>
+        </select>
+      </form>
     </div>
   </nav>
 </div>
