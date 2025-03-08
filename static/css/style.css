@@ -240,11 +240,25 @@ body {
 
 /* Vibration keyframes */
 @keyframes vibrate {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
-  100% { transform: translateX(4px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(4px);
+  }
 }
 
 /* Apply vibration effect only to icons */
@@ -746,7 +760,7 @@ div[role="progressbar"]::before {
 /* Carousel caption wrapper centered using Flexbox */
 .carousel-caption-wrapper {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -1319,7 +1333,11 @@ h1 {
   color: #75D457;
   /* Change to the desired hover color */
   text-decoration: none;
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+.about-h4 i {
+  margin-left: 15px;
 }
 
 /* Section-Specific Styles */
@@ -1408,6 +1426,7 @@ h1 {
 .bus-training {
   animation: hoverSequenceTraining 6s infinite;
 }
+
 /* WHATSAPP, CALL BUTTONS */
 
 .fixed-buttons {
@@ -1461,4 +1480,10 @@ h1 {
   80% {
     box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
   }
+}
+
+h9 {
+  font-size: 3rem;
+  color: #75D457;
+  font-weight: 500;
 }
