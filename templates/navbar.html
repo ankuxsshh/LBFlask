@@ -41,16 +41,13 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav d-flex gap-2">
           <li class="nav-item">
-            <a class="nav-link styled-link active" href="/">Home</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link styled-link" href="/about-us">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link styled-link" href="/training-courses">Training Courses</a>
+            <a class="nav-link styled-link" href="/collection">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link styled-link" href="/collection">Services</a>
+            <a class="nav-link styled-link" href="/training-courses">Training Courses</a>
           </li>
           <li class="nav-item">
             <a class="nav-link styled-link" href="/careers">Careers</a>
@@ -67,12 +64,20 @@
               <img src="static/images/download.gif" alt="Download Brochure" style="height: 30px; width: auto;">
             </a>
           </li> 
+          <li class="nav-item">
+            <a class="nav-link styled-link" href="">Portals</a>
+          </li> 
         </ul>
       </div>
+      
+      <!-- Navigation Link -->
+      <a class="nav-link styled-link" href="#our-locations">
+        <img src="static/images/globe.gif" alt="" style="height: 30px; width: auto;">
+      </a>
 
       <!-- Country Dropdown Form -->
       <form method="POST" action="/" class="d-flex">
-        <select name="country" class="form-select fw-bold custom-dropdown border-0 focus-border-none" onchange="this.form.submit()">
+        <select name="country" class="form-select fw-bold custom-dropdown border-0 focus-border-none" style="text-align: right" onchange="this.form.submit()">
           <option value="Canada" {% if country == 'Canada' %}selected{% endif %}>Canada</option>
           <option value="UK" {% if country == 'UK' %}selected{% endif %}>UK</option>
           <option value="Qatar" {% if country == 'Qatar' %}selected{% endif %}>Qatar</option>

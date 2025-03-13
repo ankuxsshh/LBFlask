@@ -75,7 +75,8 @@
             <div class="background-overlay position-absolute w-100 h-100" style="
               background-image: url('static/images/element.JPG'); 
               background-repeat: repeat; 
-              background-size: 40px 40px; 
+              background-size: 35px 35px; 
+              position: absolute !important; 
               opacity: 0.1; 
               top: 0; 
               left: 0; 
@@ -141,7 +142,7 @@
                             <div class="card-body">
                                 <ul class="list-unstyled">
                                     <li class="pb-3 mt-3">
-                                        <h4 class="about-h4">Who we are <i class="fa-solid fa-question fs-5"></i></h4>
+                                        <h4 class="about-h4">Who we are <i class="fa-solid fa-user fs-5"></i></h4>
                                     </li>
                                     <li class="pb-3 mt-3">
                                         <h4 class="about-h4">Our Quality Statement <i class="fa-solid fa-star fs-5"></i></h4>
@@ -260,7 +261,8 @@
             <div class="background-overlay position-absolute w-100 h-100" style="
               background-image: url('static/images/element.JPG'); 
               background-repeat: repeat; 
-              background-size: 40px 40px; 
+              background-size: 35px 35px; 
+              position: absolute !important;
               opacity: 0.1; 
               top: 0; 
               left: 0; 
@@ -341,33 +343,23 @@
             <div class="container" data-aos="fade-up" data-aos-duration="1000">
 
                 <h2 class="card-title fw-bold" style="font-size: 38px; color: #0C334A;">What Our Client Says</h2>
-                <h6 class="card-subtitle mt-3 mb-5 text-body-secondary" style="font-size: 18px;">Hear from Our Satisfied
-                    Trainees and Partners</h6>
+                <h6 class="card-subtitle mt-3 mb-5 text-body-secondary" style="font-size: 18px;">Hear from Our Satisfied Trainees and Partners</h6>
 
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- First Carousel -->
                     <div class="col d-flex">
                         <div class="card border-0 h-100">
-                            <video class="card-img" autoplay muted loop>
-                                <source src="static/videos/test.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="col d-flex">
-                        <div class="card border-0 h-100">
-                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselFirst" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner h-100">
                                     <div class="carousel-item active h-100">
                                         <div class="d-flex justify-content-center align-items-center h-100">
                                             <div class="card w-100 border-0">
                                                 <div class="card-body">
-                                                    <p class="card-text">Contrary to popular belief, Lorem Ipsum is not
-                                                        simply random text.</p>
-                                                    <h5 class="card-title text-center">Name</h5>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-center">
-                                                        Position</h6>
-                                                </div>
-                                                <div class="test-image rounded-circle bg-image mb-3"
-                                                    style="background-image: url('static/images/2150709932.jpg');">
+                                                    <img src="https://images.unsplash.com/photo-1560674457-12073ed6fae6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" class="" style="height: 50px; width: 50px; border-radius: 50%;" alt="">
+                                                    <br>
+                                                    <h5 class="card-title text-left">John Doe</h5>
+                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-left">Full Stack Developer</h6>
+                                                    <p class="card-text">"The training program was exceptional! The instructors were knowledgeable, and the course material was practical and up-to-date. Highly recommended!"</p>                                                     
                                                 </div>
                                             </div>
                                         </div>
@@ -376,45 +368,59 @@
                                         <div class="d-flex justify-content-center align-items-center h-100">
                                             <div class="card w-100 border-0">
                                                 <div class="card-body">
-                                                    <p class="card-text">Contrary to popular belief, Lorem Ipsum is not
-                                                        simply random text.</p>
-                                                    <h5 class="card-title text-center">Name</h5>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-center">
-                                                        Position</h6>
-                                                </div>
-                                                <div class="test-image rounded-circle bg-image mb-3"
-                                                    style="background-image: url('static/images/2150709932.jpg');">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item h-100">
-                                        <div class="d-flex justify-content-center align-items-center h-100">
-                                            <div class="card w-100 border-0">
-                                                <div class="card-body">
-                                                    <p class="card-text">Contrary to popular belief, Lorem Ipsum is not
-                                                        simply random text. </p>
-                                                    <h5 class="card-title text-center">Name</h5>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-center">
-                                                        Position</h6>
-                                                </div>
-                                                <div class="test-image rounded-circle bg-image mb-3"
-                                                    style="background-image: url('static/images/2150709932.jpg');">
+                                                    <img src="https://images.unsplash.com/photo-1560674457-12073ed6fae6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" class="" style="height: 50px; width: 50px; border-radius: 50%;" alt="">
+                                                    <br>
+                                                    <h5 class="card-title text-left">John Doe</h5>
+                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-left">Full Stack Developer</h6>
+                                                    <p class="card-text">"The training program was exceptional! The instructors were knowledgeable, and the course material was practical and up-to-date. Highly recommended!"</p>                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Image (Image) -->
+                    <div class="col d-flex">
+                        <div class="card border-0 h-100">
+                            <img src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="border-radius: 10px;">
+                        </div>
+                    </div>
+
+                    <!-- Second Carousel -->
+                    <div class="col d-flex">
+                        <div class="card border-0 h-100">
+                            <div id="carouselSecond" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100">
+                                    <div class="carousel-item active h-100">
+                                        <div class="d-flex justify-content-center align-items-center h-100">
+                                            <div class="card w-100 border-0">
+                                                <div class="card-body">
+                                                    <img src="https://images.unsplash.com/photo-1560674457-12073ed6fae6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" class="" style="height: 50px; width: 50px; border-radius: 50%;" alt="">
+                                                    <br>
+                                                    <h5 class="card-title text-left">John Doe</h5>
+                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-left">Full Stack Developer</h6>
+                                                    <p class="card-text">"The training program was exceptional! The instructors were knowledgeable, and the course material was practical and up-to-date. Highly recommended!"</p>                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <div class="d-flex justify-content-center align-items-center h-100">
+                                            <div class="card w-100 border-0">
+                                                <div class="card-body">
+                                                    <img src="https://images.unsplash.com/photo-1560674457-12073ed6fae6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" class="" style="height: 50px; width: 50px; border-radius: 50%;" alt="">
+                                                    <br>
+                                                    <h5 class="card-title text-left">John Doe</h5>
+                                                    <h6 class="card-subtitle mb-2 text-body-secondary text-left">Full Stack Developer</h6>
+                                                    <p class="card-text">"The training program was exceptional! The instructors were knowledgeable, and the course material was practical and up-to-date. Highly recommended!"</p>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -424,7 +430,8 @@
     </div>
 </section>
 
-<section class="mt-5" style="margin: 0;">
+<!-- Our Locations Section -->
+<section id="our-locations" class="mt-5" style="margin: 0;">
     <div class="container-fluid" style="box-sizing: border-box;">
         <div class="card rounded-4 pt-5 pb-5 border-0">
             <div class="container text-left" data-aos="fade-up" data-aos-duration="1000">
@@ -435,22 +442,30 @@
                 <!-- World map container -->
                 <div class="map-container position-relative mx-auto" style="width: 100%;">
                     <img src="static/images/maplocations.jpg" alt="World map" class="img-fluid rounded-3">
-
                     <!-- Location pins -->
                     <div class="pin" style="top: 30%; left: 18%;">
-                        <span>LLOYDS BUREAU
-                            <br><i class="fa-solid fa-phone"></i> +1 (780) 228-9651</span>
+                        <span><i class="ri-map-pin-line"></i> Lloyds Bureau <br> 1810 37c <br> Ave NW Edmonton <br> Albverta T6T 1S5 <br> Canada <br><br>
+                            <i class="ri-phone-line"></i> +1 78 022 89851 <br><br>
+                            <i class="ri-mail-line"></i> sales.canada@lloydsbureau.com <br><br>
+                            <i class="ri-links-line"></i> https://www.lloydsbureau.com
+                        </span>
                     </div>
                     <div class="pin" style="top: 34%; left: 47%;">
-                        <span><i class="fa-solid fa-location-dot"></i> UNITED KINGDOM</span>
+                        <span><i class="ri-map-pin-line"></i> UNITED KINGDOM</span>
                     </div>
                     <div class="pin" style="top: 50%; left: 61%;">
-                        <span>HALEYS Group Middle East
-                            <br><i class="fa-solid fa-location-dot"></i> Sayer Building | Barwa Commercial Avenue <br> P.O.Box : 40230</span>
+                        <span><i class="ri-map-pin-line"></i> Lloyds Bureau <br> Sayer Building <br> Barwa Commercial Avenue <br> O.O.Box - 40230 <br> Qatar <br><br>
+                            <i class="ri-phone-line"></i> +974 33112974 <br><br>
+                            <i class="ri-mail-line"></i> sales.qatar@lloydsbureau.com <br><br>
+                            <i class="ri-links-line"></i> https://www.lloydsbureau.com
+                        </span>
                     </div>
                     <div class="pin" style="top: 54%; left: 68%;">
-                        <span>LB Certifications
-                            <br><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+                        <span><i class="ri-map-pin-line"></i> Lloyds Bureau <br> Suit no #315, <br> Building No: 24/1701, <br> 2nd Floor, KC Arcade, <br> CSED P.O - 682037 <br> Ernakulam, Kerala, India <br>
+                            <i class="ri-phone-line"></i> +91 9847000190 <br><br>
+                            <i class="ri-mail-line"></i> sales.india@lloydsbureau.com <br><br>
+                            <i class="ri-links-line"></i> https://www.lloydsbureau.com
+                        </span>
                     </div>
                 </div>
             </div>
