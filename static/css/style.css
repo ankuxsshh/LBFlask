@@ -332,7 +332,7 @@ body {
 }
 
 .nav.headerNav {
-  margin-top: 7.2rem;
+  margin-top: 6.5rem;
   height: 36px;
 }
 
@@ -614,8 +614,8 @@ div[role="progressbar"]::before {
   align-items: center;
   background: #ffffff;
   border-radius: 20px;
-  top: 4px;
-  height: 29px;
+  top: 5px;
+  height: 28px;
   right: 44px;
 }
 
@@ -779,6 +779,7 @@ div[role="progressbar"]::before {
   font-size: 2.5rem;
   color: white;
   line-height: 1.2;
+  width: max-content;
 }
 
 h4 {
@@ -1091,7 +1092,8 @@ h1 {
   display: none;
   white-space: nowrap;
   position: absolute;
-  bottom: 0.8rem;
+  top: 7rem;
+  right: 1rem;
   transform: translateY(-50%);
   background: white;
   padding: 0.5rem 0.5rem;
@@ -1486,5 +1488,7 @@ h1 {
 h9 {
   font-size: 3rem;
   color: #75D457;
-  font-weight: 500;
+  font-weight: 600;
+  margin-top: -190px;
+  margin-inline-start: auto;
 }
