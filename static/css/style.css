@@ -194,6 +194,7 @@ body {
 .top-bar ul {
   list-style: none;
   display: flex;
+  margin-right: -110px;
 }
 
 .top-bar li {
@@ -780,6 +781,7 @@ div[role="progressbar"]::before {
   color: white;
   line-height: 1.2;
   width: max-content;
+  margin-bottom: 100px;
 }
 
 h4 {
@@ -1096,7 +1098,7 @@ h1 {
   right: 1rem;
   transform: translateY(-50%);
   background: white;
-  padding: 0.5rem 0.5rem;
+  padding: 10px;
   font-size: 0.8rem;
   font-weight: 500;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
@@ -1267,6 +1269,7 @@ h1 {
   z-index: 2;
   overflow: hidden;
   /* Ensures content does not spill outside the card */
+  height: 470px;
 }
 
 .about-section .about-bg-image {
@@ -1491,4 +1494,6 @@ h9 {
   font-weight: 600;
   margin-top: -190px;
   margin-inline-start: auto;
+  text-align: end;
 }
+
