@@ -24,7 +24,7 @@
         <!-- Links and Social Section -->
         <div class="row row-cols-1 row-cols-md-4 g-4 text-center align-items-center py-4">
             <!-- Support Column -->
-            <div class="col" style="margin-bottom: 40px;">
+            <div class="col" style="margin-bottom: 10px;">
                 <h4 class="fw-bold text-white mb-2" style="font-size: 17px;">Support</h4>
                 <ul class="list-unstyled mb-5">
                     <li><a href="#" class="footerLink">Transparency Statements</a></li>
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Quick Links Column -->
-            <div class="col" style="margin-bottom: 92px;">
+            <div class="col" style="margin-bottom: 72px;">
                 <h4 class="fw-bold text-white mb-2" style="font-size: 17px;">Quick Links</h4>
                 <ul class="list-unstyled mb-3">
                     <li><a href="/" class="footerLink">Home</a></li>
@@ -48,21 +48,21 @@
                 </ul>
             </div>
 
-            <!-- Partner Profile Column -->
-            <div class="col" style="margin-bottom: 100px;">
-                <h4 class="fw-bold text-white mb-5" style="font-size: 17px;">Partner Profile</h4>
-                <ul class="list-unstyled mb-3">
-                    <li><a href="/partner-profile#individuals" class="footerLink">For Individual</a></li>
-                    <li><a href="/partner-profile#forBusinesses" class="footerLink">For Businesses</a></li>
-                    <li><a href="/partner-profile#forGovernments" class="footerLink">For Government</a></li>
-                </ul>
-            </div>
+<!-- Partner Profile Column -->
+<div class="col" style="margin-bottom: 100px;">
+    <h4 class="fw-bold text-white mb-5" style="font-size: 17px;">Partner Profile</h4>
+    <ul class="list-unstyled mb-3">
+        <li><a href="/partner-profile#individuals" class="footerLink">For Individual</a></li>
+        <li><a href="/partner-profile#forBusinesses" class="footerLink">For Businesses</a></li>
+        <li><a href="/partner-profile#forGovernments" class="footerLink">For Government</a></li>
+    </ul>
+</div>
 
             <!-- Follow Us Column -->
             <div class="col">
                 <br>
                 <div class="align-items-center">
-                    <div class="subscribe-container mx-auto">
+                    <div class="subscribe-container mx-auto" style="margin-bottom: 18px !important;">
                         <h4 class="fw-bold text-white mb-5" style="font-size: 17px; margin-bottom: 18px !important;">Free Membership</h4>
                         <form class="mx-auto" style="max-width: 300px; width: 200px;">
                             <div class="row g-2">
@@ -80,6 +80,21 @@
                         </form>
                     </div>
                 </div>
+                            <!-- WhatsApp QR Column -->
+            <div class="col">
+                <a href="#"><img src="static/images/qr.png" alt="WhatsApp QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
+                <br>
+                <br>
+                <h4 class="fw-bold text-white mb-4" style="font-size: 14px;">WhatsApp QR</h4>
+            </div>
+
+            <!-- Contact QR Column -->
+            <div class="col">
+                <a href="#"><img src="static/images/qr.png" alt="Contact QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
+                <br>
+                <br>
+                <h4 class="fw-bold text-white mb-4" style="font-size: 14px;">Contact QR</h4>
+            </div>
                 <br>
                 <h4 class="fw-bold text-white mb-3" style="font-size: 17px; text-align: center">Follow Us On</h4>
                 <div>
@@ -99,26 +114,10 @@
                      alt="Logo" style="max-height: 120px; max-width: 220px;">
             </div>
 
-            <!-- WhatsApp QR Column -->
-            <div class="col">
-                <a href="#"><img src="static/images/qr.png" alt="WhatsApp QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
-                <br>
-                <br>
-                <h4 class="fw-bold text-white mb-4" style="font-size: 14px;">WhatsApp QR</h4>
-            </div>
-
-            <!-- Contact QR Column -->
-            <div class="col">
-                <a href="#"><img src="static/images/qr.png" alt="Contact QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
-                <br>
-                <br>
-                <h4 class="fw-bold text-white mb-4" style="font-size: 14px;">Contact QR</h4>
-            </div>
-
             <!-- Payment Options -->
             <div class="col" style="bottom: 50px;">
                 <h4 class="fw-bold text-white mb-2" style="font-size: 14px;">Payment Options</h4>
-                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <div class="d-flex justify-content-center gap-3 flex-wrap" style="gap: 4rem !important;">
                     <img src="static/images/master.png" alt="Mastercard" class="payment-option">
                     <img src="static/images/visa.png" alt="Visa" class="payment-option">
                     <img src="static/images/upi.png" alt="UPI" class="payment-option">
@@ -145,8 +144,11 @@
             text-decoration: none;
             transition: color 0.3s ease-in-out;
             font-size: 15px;
-            text-decoration: none;
         }
+        
+        ul.list-unstyled li {
+            margin-bottom: 10px; /* Adds gap between links */
+        }        
 
         .footerLink:hover {
             color: #75D457;

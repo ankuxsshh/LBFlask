@@ -810,6 +810,7 @@ h1 {
   .heading-text {
     font-size: 2rem;
     line-height: 1.3;
+    max-width: fit-content;
   }
 
   h4 {
@@ -847,6 +848,8 @@ h1 {
 @media only screen and (max-width: 600px) {
   .heading-text {
     font-size: 1.5rem;
+    max-width: min-content;
+    margin-bottom: auto;
   }
 
   h4 {
