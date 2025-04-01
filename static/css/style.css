@@ -865,6 +865,7 @@ h1 {
 .custom-dropdown {
   border-radius: 10px;
   overflow: hidden;
+  border: none;
   /* Ensures border-radius applies */
 }
 
