@@ -13,8 +13,9 @@
                     </h5>
                 </div>
                 <div class="col-4 col-md-4 text-end pe-5">
-                    <button href="#" class="btn-light fw-bold rounded-10" 
-                       style="width: 100px; font-size: 15px; padding: 8px; border-radius: 5px; border: none;">Learn On <span class="fw-bold"><i class='bx bx-right-arrow-alt'></i></span></button>
+                    <a href="#" class="btn btn-light fw-bold rounded-10 about-btn">
+                        Learn On <span class="fw-bold"><i class='bx bx-right-arrow-alt'></i></span>
+                    </a>                    
                 </div>
             </div>
         </div>
@@ -44,7 +45,28 @@
                     <li><a href="/" class="footerLink">About Us</a></li>
                     <li><a href="/collection" class="footerLink">Services</a></li>
                     <li><a href="/contact" class="footerLink">Contact Us</a></li>
-                    <li><a href="/collection" class="footerLink">Industry Link</a></li>
+                    <ul class="footer-nav list-unstyled">
+                        <li class="position-relative industry-dropdown">
+                            <a href="javascript:void(0);" class="footerLink" id="industryToggle">
+                                Industry Link <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="dropdown-menu-custom list-unstyled" id="industryDropdown">
+                                <li><a href="#">Nebosh</a></li>
+                                <li><a href="#">OPITO</a></li>
+                                <li><a href="#">LEEA</a></li>
+                                <li><a href="#">ECITB</a></li>
+                                <li><a href="#">CISRB</a></li>
+                                <li><a href="#">IMO STCW</a></li>
+                                <li><a href="#">NFPA</a></li>
+                                <li><a href="#">CompEx</a></li>
+                                <li><a href="#">GWO</a></li>
+                                <li><a href="#">IRATA</a></li>
+                                <li><a href="#">PASMA</a></li>
+                                <li><a href="#">SpanSet</a></li>
+                                <li><a href="#">Medic First Aid</a></li>
+                            </ul>
+                        </li>
+                    </ul>                                       
                 </ul>
             </div>  
 
@@ -114,7 +136,7 @@
             </div>
 
             <!-- WhatsApp QR Column -->
-            <div class="col" style="margin-top: -90px;">
+            <div class="col" style="margin-top: -56px;">
                 <a href="#"><img src="static/images/qr.png" alt="WhatsApp QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
                 <br>
                 <br>
@@ -122,7 +144,7 @@
             </div>
 
             <!-- Contact QR Column -->
-            <div class="col" style="margin-top: -90px;">
+            <div class="col" style="margin-top: -56px;">
                 <a href="#"><img src="static/images/qr.png" alt="Contact QR" class="rounded-2" style="height: 80px; width: 80px;"></a>
                 <br>
                 <br>
@@ -230,17 +252,72 @@
                 width: 30px;
             }
         }
-        . {
-            width: 100px;
-            font-size: 15px;
-            padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+
+        .footer-nav {
+            position: relative;
         }
-    
-        .custom-button:hover {
-            background-color: #007bff; /* Change to your desired hover background color */
-            color: #fff; /* Change text color on hover */
-            cursor: pointer; /* Add pointer cursor on hover */
+        
+        .industry-dropdown {
+            position: relative;
         }
+        
+        .dropdown-menu-custom {
+            position: absolute;
+            top: -258px;
+            left: 70%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 0;
+            display: none;
+            z-index: 10;
+            min-width: 150px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-menu-custom li {
+            padding: 5px 20px;
+        }
+        
+        .dropdown-menu-custom li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-menu-custom li a:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .dropdown-menu-custom.show {
+            display: block;
+        }
+        .about-btn i {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            transform: rotate(0deg);
+        }
+        
+        .about-btn:hover i {
+            transform: rotate(315deg);
+        }
+        
     </style>
+
+    <script>
+        const toggleBtn = document.getElementById('industryToggle');
+        const dropdown = document.getElementById('industryDropdown');
+    
+        toggleBtn.addEventListener('click', function () {
+            dropdown.classList.toggle('show');
+        });
+    
+        // Optional: Close when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!toggleBtn.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+    </script>
+    
 </footer>
